@@ -19,8 +19,20 @@ class Student {
     }
 }
 
+// Functie met hoofdletter? Constructor!
+function Person() {
+    this.name = 'Adriaan';
+    this.age = 30;
+
+    this.sayHello = () => {
+        console.log(`Hi, my name is ${this.name}`);
+    }
+}
+
 const favoriteStudent = new Student('Jan', 20);
 const newStudent = new Student('Mert', 25);
 const erasmusStudent = new Student('Juan', 21);
+
+const teacher = new Person();
 
 console.log(favoriteStudent.age, favoriteStudent.name, favoriteStudent.getOlder());
