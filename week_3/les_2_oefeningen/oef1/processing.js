@@ -25,26 +25,26 @@ function processData(data) {
     return data;
 }
 
-function calculateImportanceCount(data, threshold = 3) {
-    let highImportanceCount = 0;
-    let lowImportanceCount = 0;
+function calculateCount(data, threshold = 3) {
+    let highCount = 0;
+    let lowCount = 0;
 
     data.forEach((item) => {
         if (item.details.importance > 3) {
-            highImportanceCount++;
+            highCount++;
         } else {
-            lowImportanceCount++;
+            lowCount++;
         }
     });
 
     return {
-        highImportanceCount,
-        lowImportanceCount
+        highCount,
+        lowCount
     }
 }
 
 
 module.exports = {
     processData,
-    calculateImportanceCount
+    calculateCount
 }
