@@ -1,22 +1,27 @@
 const express = require('express');
-var bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const myServer = express();
-
-myServer.use(bodyParser.urlencoded({ extended: false }))
-myServer.use(bodyParser.json())
 
 const PORT = 3000;
 const HOST = 'localhost';
+
+// This tells Express to parse incoming requests with JSON payloads (e.g., from POST/PUT)
+myServer.use(bodyParser.json());
 
 function getCurrentTime() {
     const now = new Date();
     return `${now.getUTCHours() + 1}:${now.getUTCMinutes()}`;
 }
 
-myServer.get('/api', (request, response) => {
-    console.log('Verzoek op de server!');
+myServer.get('/api', (req, response) => {
+    // Request Body is leeg omdat Express geen body aanvaard in GET verzoek.
+    console.log('Verzoek op de server!', req.body);
+
     response.status(200);
+
+    // Je kan maar 1 iets terugsturen. "send" voor tekst, "json" voor JSON.
     // response.send(`De tijd op de server is: ${getCurrentTime()}`);
+
     response.json({
         name: "API Test!",
         requestTime: getCurrentTime()
@@ -24,6 +29,7 @@ myServer.get('/api', (request, response) => {
 });
 
 // Maak een /api/recipes endpoint! Geef hier alle recepten terug!
+
 
 myServer.listen(PORT, HOST, () => {
     console.log(`Server staat aan op http://${HOST}:${PORT}!`); // Afsluiten door Ctrl + C
