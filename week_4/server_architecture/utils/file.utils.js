@@ -7,7 +7,7 @@ function getData(file) {
         const fileContent = fileSystem.readFileSync(filePath, 'utf-8');
         return JSON.parse(fileContent);
     } catch (error) {
-        console.error(error)
+        throw new Error(error);
     }
 }
 
