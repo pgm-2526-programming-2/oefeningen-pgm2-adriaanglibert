@@ -5,7 +5,8 @@ const app = express();
 
 // app.get("/api/quotes", (req, res) => {}))
 // app.get("/api/quotes", (req, res) => getAllQuotes(req, res))
-app.get("/api/quotes", getAllQuotes) // Geen haakjes? Standaard parameters worden automatisch doorgegeven!
+// Geen haakjes? Standaard parameters worden automatisch doorgegeven!
+app.get("/api/quotes", getAllQuotes)
 
 app.listen(8080, 'localhost', (err) => {
     if (err) {
