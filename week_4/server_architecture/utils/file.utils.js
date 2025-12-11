@@ -11,6 +11,8 @@ function getData(file) {
     }
 }
 
+// Write data to file!
+
 module.exports = {
     getData
 }

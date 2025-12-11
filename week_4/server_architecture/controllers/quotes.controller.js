@@ -1,5 +1,9 @@
 const { getData } = require("../utils/file.utils");
 
+/*
+Controller zal logica afhandelen die specifiek is voor een route, de data uit het Model ophaalt, deze verwerkt en vervolgens de juiste Response (vaak in de vorm van een View of JSON) naar de client stuurt.
+*/
+
 function getAllQuotes(req, res) {
     try {
         res.json(getData('quotes.json'));
@@ -21,7 +25,12 @@ function getQuoteById(req, res) {
     res.json(quoteWithId);
 }
 
+function updateQuote() {
+    // Mag je nog leeg laten voor volgende week.
+}
+
 module.exports = {
     getAllQuotes,
-    getQuoteById
+    getQuoteById,
+    updateQuote
 }
