@@ -1,12 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const myServer = express();
+const fs = require('fs');
+const path = require('path');
 
 const PORT = 3000;
 const HOST = 'localhost';
 
 // This tells Express to parse incoming requests with JSON payloads (e.g., from POST/PUT)
 myServer.use(bodyParser.json());
+
+function getContentFromFile(fileNameAndExtension) {
+    const fileContentAsString = fs.readFileSync(path.join(__dirname, fileNameAndExtension), 'utf8');
+    return JSON.parse(fileContentAsString);
+}
 
 function getCurrentTime() {
     const now = new Date();
@@ -29,7 +36,10 @@ myServer.get('/api', (req, response) => {
 });
 
 // Maak een /api/recipes endpoint! Geef hier alle recepten terug!
-
+myServer.get('/api/recipes', (req, res) => {
+    res.json(getContentFromFile('recipes.json'));
+});
+// Uitbreiding, endpoint dat maar 1 item teruggeeft.
 
 myServer.listen(PORT, HOST, () => {
     console.log(`Server staat aan op http://${HOST}:${PORT}!`); // Afsluiten door Ctrl + C
