@@ -21,8 +21,16 @@ function getQuoteById(req, res) {
     const allQuotes = getData('quotes.json');
     // Zoeken in array? .find()
     const quoteWithId = allQuotes.find(quote => quote.id == questionId);
-    // Response -> resultaat
-    res.json(quoteWithId);
+
+    if (questionId) {
+        // Response -> resultaat
+        res.json(quoteWithId);
+    } else {
+        res.status(422);
+        // res.json(new Error("Quote bestaat niet."));
+        throw new Error('Quote bestaat niet.');
+    }
+
 }
 
 function updateQuote() {
