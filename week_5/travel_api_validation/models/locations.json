@@ -110,20 +110,12 @@
     }
   },
   {
+    "uuid": "k1l2m3n4-o5p6-7890-q1r2-s3t4u5v6w7x8",
     "country": "Belgium",
     "city": "Brussels",
     "coordinates": {
       "lat": 50.8949,
       "long": 4.3416
     }
-  },
-  {
-    "country": "Belgium",
-    "city": "Brussels",
-    "coordinates": {
-      "lat": 50.8949,
-      "long": 4.3416
-    },
-    "id": "782fbdea-25eb-4c80-b263-22700ce5a216"
   }
 ]
