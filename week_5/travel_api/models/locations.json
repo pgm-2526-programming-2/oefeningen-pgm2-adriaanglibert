@@ -125,5 +125,44 @@
       "long": 4.3416
     },
     "id": "782fbdea-25eb-4c80-b263-22700ce5a216"
+  },
+  {
+    "name": "Leeuwstraat",
+    "country": "Belgium",
+    "city": "Ghent",
+    "coordinates": {
+      "lat": 50.8949,
+      "long": 4.3416
+    },
+    "id": "81dc9384-6a64-4d34-8883-18df274b4b4d"
+  },
+  {
+    "name": 3,
+    "city": "Ghent",
+    "coordinates": {
+      "lat": "50.8949",
+      "long": 4.3416
+    },
+    "id": "c233257a-754b-4d01-aad9-320bdbe93eb8"
+  },
+  {
+    "name": "Korenmarkt",
+    "country": "Belgium",
+    "city": "Ghent",
+    "coordinates": {
+      "lat": "50.8949",
+      "long": 4.3416
+    },
+    "id": "ca500421-f370-4103-8616-6480344c77fd"
+  },
+  {
+    "name": "Korenmarkt",
+    "country": "Belgium",
+    "city": "Ghent",
+    "coordinates": {
+      "lat": 50.8949,
+      "long": 4.3416
+    },
+    "id": "62e61a4e-b2b7-475a-962f-13ddda7783f8"
   }
 ]
