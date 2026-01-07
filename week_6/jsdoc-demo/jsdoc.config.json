@@ -1,0 +1,14 @@
+{
+    "source": {
+        "include": [
+            "src"
+        ],
+        "includePattern": ".js$",
+        "excludePattern": "node_modules/"
+    },
+    "opts": {
+        "template": "templates/default",
+        "destination": "./demo-documentation/",
+        "recurse": true
+    }
+}
